@@ -1,0 +1,9 @@
+<p>minecoin works!</p>
+<h2>Mine ShintoCoins</h2>
+<p>Here you can mine ShintoCoins by being the first to solve the alogrithm:</p>
+What is the 7th Fibonacci sequence number?
+<form (submit)="onMineCoin()">
+    {{answer | json}}
+    <input type="number" name="answer" [(ngModel)]="answer">
+    <input type="submit" value="Mine">
+</form>

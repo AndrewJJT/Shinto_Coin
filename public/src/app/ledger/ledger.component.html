@@ -1,0 +1,24 @@
+<p>ledger works!</p>
+<h2>Browse the Ledger</h2>
+{{ allactions | json}}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Amount</th>
+            <th>Value</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let action of allactions">
+            <td scope="row">{{action.action}}</td>
+            <td>{{action.numOfCoins}}</td>
+            <td>{{action.value}}</td>
+            <td><button [routerLink]="['/transaction', action.id]">Details</button></td>
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet> 
